@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Updating portfolio content
+
+Experience entries and the "Also" section are data-driven, not hardcoded markup. To add or edit them:
+
+1. Open [`src/data/content.ts`](src/data/content.ts).
+2. For a new job, copy an object in the `experience` array and edit `company`, `dates`, `role`, and `bullets`.
+3. For a new "Also" item, copy an object in the `otherWork` array and edit `title` and `description`.
+4. Save — no need to touch `src/app/page.tsx` or any JSX.
+
+The hero copy and Featured Project section are still hand-edited directly in `src/app/page.tsx`, since each is a single one-off block rather than a repeating list.
+
 ## Getting Started
 
 First, run the development server:

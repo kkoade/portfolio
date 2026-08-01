@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #f7f5f0;
+  --card: #ffffff;
+  --foreground: #17181c;
+  --muted-foreground: #6b6a66;
+  --faint: #c7c5be;
+  --border: #dcd9d0;
+  --accent: #1d4ed8;
+  --accent-soft: #eaf0fe;
+  --accent-border: #b7c9fb;
+  --accent-flag: #c2410c;
+  --tech-purple: #6d28d9;
+  --tech-purple-soft: #f1ecfd;
+  --tech-purple-border: #d7c8f7;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0b0b0a;
+    --card: #131311;
+    --foreground: #f2f1ec;
+    --muted-foreground: #9a988f;
+    --faint: #3a3934;
+    --border: #232220;
+    --accent: #5b8def;
+    --accent-soft: #10192e;
+    --accent-border: #294a8f;
+    --accent-flag: #f0703a;
+    --tech-purple: #b391f5;
+    --tech-purple-soft: #1c1530;
+    --tech-purple-border: #382a5c;
   }
+}
+
+:root[data-theme="dark"] {
+  --background: #0b0b0a;
+  --card: #131311;
+  --foreground: #f2f1ec;
+  --muted-foreground: #9a988f;
+  --faint: #3a3934;
+  --border: #232220;
+  --accent: #5b8def;
+  --accent-soft: #10192e;
+  --accent-border: #294a8f;
+  --accent-flag: #f0703a;
+  --tech-purple: #b391f5;
+  --tech-purple-soft: #1c1530;
+  --tech-purple-border: #382a5c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-border: var(--accent-border);
+  --color-accent-flag: var(--accent-flag);
+  --color-tech-purple: var(--tech-purple);
+  --color-tech-purple-soft: var(--tech-purple-soft);
+  --color-tech-purple-border: var(--tech-purple-border);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+  --font-name-sans: var(--font-name-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes rolodex-flip {
+  0% {
+    transform: rotateX(-90deg) translateY(-40%);
+    opacity: 0;
+  }
+  60% {
+    transform: rotateX(8deg) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg) translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-rolodex-flip {
+  animation: rolodex-flip 0.35s ease-out;
+}
+
+@keyframes wipe-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.animate-wipe-reveal {
+  animation: wipe-reveal 0.5s cubic-bezier(0.65, 0, 0.35, 1);
 }
