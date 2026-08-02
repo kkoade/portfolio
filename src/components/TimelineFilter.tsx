@@ -72,13 +72,19 @@ export function TimelineFilter({ entries }: { entries: TimelineEntry[] }) {
   const visible = entries.filter((e) => e.category === activeFilter);
 
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    const target = entries.find((e) => e.id === hash);
-    if (!target) return;
-    setActiveFilter(target.category);
-    requestAnimationFrame(() => {
-      document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
-    });
+    const syncToHash = () => {
+      const hash = window.location.hash.slice(1);
+      const target = entries.find((e) => e.id === hash);
+      if (!target) return;
+      setActiveFilter(target.category);
+      requestAnimationFrame(() => {
+        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+      });
+    };
+
+    syncToHash();
+    window.addEventListener("hashchange", syncToHash);
+    return () => window.removeEventListener("hashchange", syncToHash);
   }, [entries]);
 
   return (
