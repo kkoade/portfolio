@@ -11,7 +11,7 @@ export default function Home() {
           <span className="h-1.5 w-1.5 rounded-full bg-accent-flag" />
           Product Manager
         </p>
-        <h1 className="text-5xl sm:text-6xl leading-[1.05]">
+        <h1 className="text-4xl sm:text-6xl leading-[1.05]">
           <NameRotator name="Khalif Adegeye" fonts={nameFonts} />
         </h1>
         <p className="max-w-xl text-muted-foreground">
