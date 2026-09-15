@@ -19,8 +19,8 @@ export type BuildStory = {
 
 export type FeaturedProject = {
   description: string;
-  demoUrl: string;
-  demoLabel: string;
+  demoUrl?: string;
+  demoLabel?: string;
   videoLabel: string;
   screenshots: { label: string; src: string }[];
 };
@@ -128,8 +128,6 @@ const rawTimeline: TimelineEntry[] = [
     featured: {
       description:
         "0-to-1 AI-native product helping creative business owners make smarter business decisions. Data schema, business logic, and UI/UX on Next.js, TypeScript, and Supabase.",
-      demoUrl: "https://visionary-mvp50.vercel.app/demo",
-      demoLabel: "Live demo",
       videoLabel: "Product demo video",
       screenshots: [
         { label: "Screenshot — Home", src: "/screenshots/visionary-demo.png" },

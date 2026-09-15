@@ -207,12 +207,14 @@ export function TimelineFilter({ entries }: { entries: TimelineEntry[] }) {
                   <span className="font-mono text-xs uppercase tracking-widest text-accent-flag">
                     Featured
                   </span>
-                  <a
-                    href={entry.featured.demoUrl}
-                    className="font-mono text-xs font-bold text-tech-purple transition-[text-shadow] duration-300 hover:underline hover:[text-shadow:0_0_12px_var(--tech-purple)]"
-                  >
-                    {entry.featured.demoLabel} →
-                  </a>
+                  {entry.featured.demoUrl && entry.featured.demoLabel && (
+                    <a
+                      href={entry.featured.demoUrl}
+                      className="font-mono text-xs font-bold text-tech-purple transition-[text-shadow] duration-300 hover:underline hover:[text-shadow:0_0_12px_var(--tech-purple)]"
+                    >
+                      {entry.featured.demoLabel} →
+                    </a>
+                  )}
                 </div>
                 <p className="text-muted-foreground">{entry.featured.description}</p>
                 <div className="grid grid-cols-2 gap-4">
