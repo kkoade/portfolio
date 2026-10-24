@@ -16,14 +16,7 @@ export default function Home() {
         </h1>
         <p className="max-w-xl text-muted-foreground">
           4+ years shipping AI-native products across fintech, developer
-          tools, and 0-to-1 ventures. Currently at Capital One. Building{" "}
-          <a
-            href="#visionary"
-            className="text-purple-600 dark:text-purple-400 transition-[text-shadow] duration-300 hover:underline hover:[text-shadow:0_0_12px_theme(colors.purple.500)]"
-          >
-            Project Visionary
-          </a>{" "}
-          on nights and weekends.
+          tools, and 0-to-1 ventures. Currently at Capital One.
         </p>
         <div className="flex gap-4 font-mono text-sm">
           <a

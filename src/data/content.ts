@@ -118,66 +118,6 @@ export type TimelineEntry = {
 
 const rawTimeline: TimelineEntry[] = [
   {
-    id: "visionary",
-    category: "Project",
-    company: "Project Visionary",
-    dates: "Feb 2026 — Present",
-    sortKey: "2026-02",
-    role: "Founder, Independent",
-    bullets: [],
-    featured: {
-      description:
-        "0-to-1 AI-native product helping creative business owners make smarter business decisions. Data schema, business logic, and UI/UX on Next.js, TypeScript, and Supabase.",
-      videoLabel: "Product demo video",
-      screenshots: [
-        { label: "Screenshot — Home", src: "/screenshots/visionary-demo.png" },
-        { label: "Screenshot — Your Work", src: "/screenshots/visionary-your-work.png" },
-      ],
-    },
-    buildStory: {
-      problem:
-        "Years working alongside creatives surfaced the same gap, over and over: brilliant execution, no business instinct. Visionary turns that instinct into a system — pricing, sales, manufacturing, and cost decisions a creative business owner can actually act on.",
-      bigPicture: [
-        {
-          title: "Formed the thesis in the field",
-          detail:
-            "Embedded directly with NYC creatives — live interviews, ongoing consulting — then reverse-engineered what they needed into a repeatable playbook driving Visionary's insights system.",
-        },
-        {
-          title: "Let the research narrow the bet",
-          detail:
-            "A strategy audit narrowed the ICP to artist-specific, research-backed, and identified the production system as the real moat — that's what collapsed the original 9-path vision to 4, not scope fatigue.",
-        },
-        {
-          title: "Solo builder, 50+ refinement sessions, 35 commits",
-          detail: "Took a general idea into a functional product, built for scale.",
-        },
-        {
-          title: "Built on nights & weekends",
-          detail:
-            "Consulted creatives and shipped alongside a full-time PM role — no dedicated runway, no team to hand off blockers to.",
-        },
-      ],
-      nittyGritty: [
-        {
-          title: "One schema bet, 20 sessions saved",
-          detail:
-            "Built one polymorphic user context table instead of one per UI path; that single call prevented 20 additional sessions building & connecting schema, for the cost of two migrations instead of one per pivot.",
-        },
-        {
-          title: "Split the UI, not the data",
-          detail:
-            "User behavior showed making the same art varies heavily person to person. Split the general 'creation' section into Your Work & Your Process while maintaining the relationship on the backend — restraint to not over-fix the schema for a UI problem.",
-        },
-        {
-          title: "Caught a silent data-loss bug",
-          detail:
-            "A validation bug was quietly dropping 3 fields on every save — caught and fixed before it hit prod.",
-        },
-      ],
-    },
-  },
-  {
     id: "capital-one",
     category: "Work",
     company: "Capital One",
